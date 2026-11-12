@@ -258,6 +258,15 @@ dialog::backdrop{background:rgba(4,10,30,.62);backdrop-filter:blur(3px)}
 @media (max-width:1240px){ .ab-hero,.ab-two{grid-template-columns:minmax(0,1fr)} .ab-art{width:min(100%,340px);justify-self:start} .stories{grid-template-columns:minmax(0,1fr)} .road{grid-template-columns:minmax(0,1fr)} .road::before{left:24px;right:auto;top:24px;bottom:24px;width:2px;height:auto} .stop{flex-direction:row;align-items:center;flex-wrap:wrap} }
 @media (min-width:700px) and (max-width:1240px){ .stories{grid-template-columns:repeat(2,minmax(0,1fr))} }
 
+/* cookie notice, consent line, HIPAA badge */
+.cookie{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:center;background:var(--surface);color:var(--fg);border-top:1px solid var(--line);box-shadow:0 -12px 32px rgba(4,10,30,.18);padding-block:14px calc(14px + env(safe-area-inset-bottom,0px));padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.cookie p{flex:1 1 320px;max-width:780px;min-width:0;font-size:14.5px;color:var(--muted)}
+.cookie a,.agree a{color:var(--accent-ink);font-weight:600}
+.cookie .btn{height:44px}
+.agree{margin-top:16px;font-size:14px;color:var(--muted)}
+.hipaa{display:inline-flex;align-items:center;gap:9px;margin-top:16px;padding:8px 14px 8px 10px;border:1.5px solid rgba(255,255,255,.3);border-radius:12px;color:#fff;font-weight:700;font-size:13.5px;letter-spacing:.02em}
+.hipaa svg{fill:none;stroke:var(--cyan);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
 /* pages: contact, terms, privacy */
 .ftr .sup{margin-top:10px;color:var(--on-band)}
 .ftr .sup a{font-weight:700;white-space:nowrap}
@@ -443,6 +452,8 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
       <li><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div><div><b>Red flags come first</b><p>Urgent symptoms are detected early and you are told to call emergency services.</p></div></li>
       <li><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div><b>Your data stays private</b><p>Encrypted in transit and at rest. Your partner never sees your medical information.</p></div></li>
       <li><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M7 3h10v18H7z"/><path d="M10 8h4M10 12h4M10 16h2"/></svg></div><div><b>Everything is on record</b><p>Each AI suggestion and doctor decision is logged for clinical review.</p></div></li>
+      <li><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.6-3.2 8-8 9-4.800-1-8-4.400-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></div><div><b>HIPAA compliance</b><p>Health information is handled in line with the U.S. Health Insurance Portability and Accountability Act (HIPAA).</p></div></li>
+      <li><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="8" cy="14" r="4"/><path d="M11 11l8-8M16 6l3 3M14 8l2 2"/></svg></div><div><b>End-to-end encryption</b><p>Your conversations and documents are encrypted end to end, from your device to your doctor.</p></div></li>
     </ul>
     <div class="er" role="note"><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg><span>EZaid is not an emergency service. If you have chest pain, trouble breathing, heavy bleeding or another emergency, call your local emergency number now.</span></div>
   </div>
@@ -594,7 +605,7 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
     <h1>Privacy policy</h1>
     <p class="enonly" data-enonly hidden>This document is available in English only.</p>
     <div data-noi18n>
-    <p class="upd">Last updated: November 10, 2026</p>
+    <p class="upd">Last updated: November 12, 2026</p>
     <h2>1. Who we are</h2>
     <p>EZaid Inc., a Delaware corporation ("EZaid", "we", "us"), operates the EZaid telemedicine service. This policy explains what personal information we collect, why we collect it and what choices you have. It applies to this website, the EZaid web portal and any related apps and phone lines.</p>
     <h2>2. Information we collect</h2>
@@ -613,12 +624,13 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
       <li>To meet our legal obligations.</li>
     </ul>
     <p>We process health information with your consent or on another basis the law allows for providing healthcare. We do not sell your personal information and we do not use your health information for advertising.</p>
+    <p><strong>HIPAA.</strong> We handle health information in line with the U.S. Health Insurance Portability and Accountability Act (HIPAA) and with the health-privacy laws of the other countries where we operate. We use and disclose protected health information only as those laws allow: to provide care, to run the service, and where the law requires it.</p>
     <h2>4. How AI is used</h2>
     <p>Your conversation with the AI assistant is processed by AI models, including models supplied by specialist providers who act on our instructions under contract. The AI prepares information for a doctor. A licensed doctor, not the AI, makes every diagnosis and prescribing decision.</p>
     <h2>5. Who we share it with</h2>
     <ul>
       <li><strong>Doctors</strong> who handle your case.</li>
-      <li><strong>Service providers</strong> who host our systems, deliver SMS messages and supply AI and communication tools. They may use your information only to provide services to us.</li>
+      <li><strong>Service providers</strong> who host our systems, deliver SMS messages and supply AI and communication tools. They may use your information only to provide services to us. Providers that handle protected health information do so under written agreements, including business associate agreements where HIPAA requires them.</li>
       <li><strong>Our partners</strong> receive only what they need to manage your subscription, such as whether your account is active. We never share your medical information with them.</li>
       <li><strong>Authorities</strong>, when the law requires it or to protect someone's safety.</li>
     </ul>
@@ -627,13 +639,13 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
     <h2>7. How long we keep it</h2>
     <p>We keep your account information while your account is open. Medical records are kept for as long as healthcare record-keeping laws in your country require. After that we delete or de-identify them.</p>
     <h2>8. Security</h2>
-    <p>Information is encrypted in transit and at rest. Access to medical information is limited to the doctors handling your case and to authorised staff, and every access is logged. No system is perfectly secure, so please keep your sign-in details private and tell us at once if you suspect unauthorised access.</p>
+    <p>Your conversations and documents are protected with end-to-end encryption, from your device to your doctor, and all information is encrypted in transit and at rest. Access to medical information is limited to the doctors handling your case and to authorised staff, and every access is logged. Our safeguards follow the HIPAA Security Rule. No system is perfectly secure, so please keep your sign-in details private and tell us at once if you suspect unauthorised access. If a breach affects your information, we will notify you as the law requires.</p>
     <h2>9. Your rights</h2>
     <p>Depending on where you live, you may have the right to see the information we hold about you, correct it, receive a copy, ask us to delete it, object to or restrict certain uses, and withdraw your consent. To use these rights, <a href="#contact">contact us</a>. You may also complain to the data protection authority in your country.</p>
     <h2>10. Children</h2>
     <p>Accounts are for adults. A parent or legal guardian may use the service for a child and is responsible for the information they provide about that child.</p>
     <h2>11. Cookies</h2>
-    <p>This website uses only the cookies and local storage needed for sign-in and security. We do not use advertising trackers.</p>
+    <p>This website uses only essential cookies and local storage: for sign-in, security and remembering your language choice. They do not track you across other sites, and we do not use advertising trackers. When you first visit, a notice asks you to accept them.</p>
     <h2>12. Changes to this policy</h2>
     <p>When we change this policy we will post the new version here and update the date above. We will notify you of significant changes.</p>
     <h2>13. Contact</h2>
@@ -645,12 +657,17 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
 <footer class="band ftr">
   <div class="wrap">
     <div class="top">
-      <div><img src="img/logo.png" alt="EZaid.ai"><p>AI that aids. Doctors who treat. Telemedicine built on a partnership between AI and licensed physicians.</p><p class="sup">Customer support, toll-free: <a href="tel:+18005550142">+1 (800) 555-0142</a></p></div>
+      <div><img src="img/logo.png" alt="EZaid.ai"><p>AI that aids. Doctors who treat. Telemedicine built on a partnership between AI and licensed physicians.</p><p class="sup">Customer support, toll-free: <a href="tel:+18005550142">+1 (800) 555-0142</a></p><div class="hipaa"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.6-3.2 8-8 9-4.800-1-8-4.400-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg><span>HIPAA compliant</span></div></div>
       <nav aria-label="Footer"><a href="#how">How it works</a><a href="#care">AI + doctors</a><a href="#access">Get access</a><a href="#partners">For partners</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a href="#about">About us</a><a href="#contact">Contact</a></nav>
     </div>
     <div class="legal"><span>© 2026 EZaid Inc. EZaid does not provide emergency care. Information from the AI assistant is not a medical diagnosis until a doctor confirms it.</span><span class="ll"><a href="#about">About us</a><a href="#terms">Terms of use</a><a href="#privacy">Privacy policy</a><a href="#contact">Contact us</a></span></div>
   </div>
 </footer>
+
+<div class="cookie" id="cookie" role="region" aria-label="Cookie notice" hidden>
+  <p data-noi18n data-tpl="We use essential cookies to make our site work properly: sign-in, security and your language choice. By continuing to use the site, you agree to our {a}Terms of use{/a} and {b}Privacy policy{/b}."></p>
+  <button class="btn btn-c" id="cookie-ok" type="button">Accept</button>
+</div>
 
 <dialog id="dlg" aria-labelledby="dlg-h">
   <div class="dlg">
@@ -678,6 +695,7 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
       <div class="alert" id="err-email" role="alert" hidden></div>
       <button class="btn btn-c" id="go-email" type="submit">Sign in</button>
     </form>
+    <p class="agree" data-noi18n data-tpl="By signing in, you agree to our {a}Terms of use{/a} and {b}Privacy policy{/b}."></p>
     <p class="note">No account yet? EZaid is activated by our partners. <a href="#access" id="to-access">How to get access</a></p>
   </div>
 </dialog>
@@ -689,6 +707,8 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
   // ---- languages: English is in the page; other languages load from lang/<code>.json (English text -> translation)
   var LANGS=['en','fr','es','de','zu','hi','tl','ms','id'], dict={}, cur='en', cache={en:{}};
   function t(k){ return dict[k]||k; }
+  function esc(x){ return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function tpl(x){ return esc(x).replace(/\{a\}(.*?)\{\/a\}/,'<a href="#terms">$1</a>').replace(/\{b\}(.*?)\{\/b\}/,'<a href="#privacy">$1</a>'); }
   function skip(el){ return !el || !!el.closest('[data-noi18n],script,style'); }
   var ATTRS=['placeholder','aria-label','alt'];
   function applyLang(){
@@ -707,6 +727,7 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
       if(!el.__i18n){ el.__i18n={}; ATTRS.forEach(function(a){ var v=el.getAttribute(a); if(v) el.__i18n[a]=v; }); }
       ATTRS.forEach(function(a){ if(el.__i18n[a]) el.setAttribute(a,t(el.__i18n[a])); });
     });
+    [].forEach.call(document.querySelectorAll('[data-tpl]'),function(el){ el.innerHTML=tpl(t(el.getAttribute('data-tpl'))); });
     document.documentElement.lang=cur;
     $('lang-c').textContent=cur.toUpperCase();
     [].forEach.call(document.querySelectorAll('[data-lang]'),function(b){ b.setAttribute('aria-selected',String(b.dataset.lang===cur)); });
@@ -773,6 +794,12 @@ textarea.in{height:150px;padding:12px 14px;resize:vertical;line-height:1.5}
   $('dlg-x').addEventListener('click',close);
   dlg.addEventListener('click',function(e){ if(e.target===dlg) close(); });
   $('to-access').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){ if(e.target.closest('.agree a')) close(); });
+
+  // cookie notice: shown until accepted (the choice is kept in this browser)
+  var ck=$('cookie'), seen=false; try{ seen=localStorage.getItem('ezaid-cookies')==='1'; }catch(e){}
+  ck.hidden=seen;
+  $('cookie-ok').addEventListener('click',function(){ ck.hidden=true; try{ localStorage.setItem('ezaid-cookies','1'); }catch(e){} });
 
   function fail(id,title,hint,field){ var el=$(id); el.innerHTML=''; el.append(t(title)); if(hint){var s=document.createElement('span'); s.textContent=t(hint); el.append(s);} el.hidden=false; if(field) $(field).classList.add('bad'); }
   function busy(btn,label,then){ var old=btn.textContent; btn.disabled=true; btn.innerHTML='<span class="spin"></span>'; btn.append(t(label)); setTimeout(function(){ btn.disabled=false; btn.textContent=old; then(); },900); }
